@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ProgramaMercado1 {
+public class ProgramaMercado {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

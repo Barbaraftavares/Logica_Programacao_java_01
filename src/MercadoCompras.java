@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MercadoCompras2 {
+public class MercadoCompras {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
