@@ -5,8 +5,6 @@ public class MercadoCompras {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nome do Produto: ");
-        //String nome = scanner.next();
-
         System.out.print("Quantidade de itens: ");
         int quantidade = scanner.nextInt();
 
