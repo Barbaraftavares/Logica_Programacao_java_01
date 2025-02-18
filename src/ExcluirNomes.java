@@ -1,13 +1,30 @@
-import java.util.*;
+import java.util.Arrays;
 
 public class ExcluirNomes {
     public static void main(String[] args) {
         String[] nomes = {"Joao", "Maria", "Barbara", "Pedro", "Ana", "Vinicius", "Barbara", "Joao", "Pedro", "Rafael", "Isabella", "Matheus", "Laura", "Guilherme", "Sofia", "Vinicius", "Amanda", "Leonardo", "Gabriela"};
 
-        System.out.println("Lista antiga: " + Arrays.toString(nomes));
+        System.out.println("Lista de nomes antiga: " + Arrays.toString(nomes));
 
-        Set<String> novaLista = new HashSet<>(Arrays.asList(nomes));
+        String[] novaLista = new String[nomes.length];
+        int indice = 0;
 
-        System.out.println("Nova lista: " + novaLista);
+        for (String nome : nomes) {
+            boolean existe = false;
+            for (String n : novaLista) {
+                if (n != null && n.equals(nome)) {
+                    existe = true;
+                    break;
+                }
+            }
+            if (!existe) {
+                novaLista[indice++] = nome;
+            }
+        }
+
+        String[] listaSemNulos = new String[indice];
+        System.arraycopy(novaLista, 0, listaSemNulos, 0, indice);
+
+        System.out.println("Nova lista: " + Arrays.toString(listaSemNulos));
     }
 }
