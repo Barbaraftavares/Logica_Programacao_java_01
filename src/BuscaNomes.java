@@ -17,6 +17,7 @@ public class BuscaNomes {
         for (String valor : valores) {
             if (valor.equalsIgnoreCase(nome)) {
                 achei = true;
+                break;
             }
         }
 
